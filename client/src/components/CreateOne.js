@@ -105,25 +105,7 @@ const CreateOne = () => {
             {/* ********************** */}
             <button type="button" id="bigbluebutton" onClick={searchHandler}></button>
             {/* search button */}
-            <div id="barbutton1"></div>
-            <div id="barbutton2"></div>
-            <div id="cross">
-                <div id="leftcross">
-                    <div id="left "></div>
-                </div>
-                <div id="topcross">
-                    <div id="upT"></div>
-                </div>
-                <div id="rightcross">
-                    <div id="rightT"></div>
-                </div>
-                <div id="midcross">
-                    <div id="midCircle"></div>
-                </div>
-                <div id="botcross">
-                    <div id="downT"></div>
-                </div>
-            </div>
+            
         </div>
         <div id="right">
 
@@ -145,7 +127,7 @@ const CreateOne = () => {
 
                     <div id="nickname-wrapper">
                     {/* {errors?.nickname ? <p id="red">{errors?.nickname.message}</p> : null} */}
-                    <label htmlFor="">Nickename: </label>
+                    <label htmlFor="">Nickname: </label>
                     <input type="text" name="nickname" id="search-bar" placeholder="Please nickname your pokemon" onChange={changeHandler} />
                     <input type="submit" value="Add to Party" />
                     {errors.postErrors ? <p className='errors'>{errors.postErrors}</p> : null}
@@ -156,20 +138,7 @@ const CreateOne = () => {
             </div>
             {/* workspace */}
 
-            <div id="blueButtons1">
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-            </div>
-            <div id="blueButtons2">
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-                <div className="blueButton"></div>
-            </div>
+            
         </div>
         </form>
     </>

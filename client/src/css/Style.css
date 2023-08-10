@@ -1,0 +1,49 @@
+
+
+
+/* Styles for the navigation bar */
+nav {
+    background-color: #d3ae19;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+  }
+
+  /* Style for the PokeBall logo */
+  img{
+    width: 70px;
+    height: 70px;
+    margin-left: 80px;
+  }
+  
+  
+ 
+  
+  /* Style for the h1 element */
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    padding-left: 10px;
+   
+  }
+  nav h1 :hover{
+    color: red;
+  }
+  
+  /* Style for the Pokedex link */
+  nav a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 80px;
+  }
+  
+  nav a:hover {
+    color: #ff0000; /* Change the color on hover */
+    
+  }
+  

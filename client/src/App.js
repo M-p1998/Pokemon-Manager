@@ -6,14 +6,17 @@ import CreateOne from './components/CreateOne';
 import DisplayAll from "./components/DisplayAll";
 import DisplayOne from "./components/DisplayOne";
 import EditOne from "./components/EditOne";
+import styles from "./css/Style.css"
+
+
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
       <nav>
-        <Link to={"/"}> <img src={PokeBall} id="pokeball" alt="logo" /> </Link>
-        <h1>Welcome to the PokeCenter</h1>
+        <Link to={"/"}> <img src={PokeBall}  alt="logo" /> </Link>
+        <h1>Poke Center</h1>
         <Link to={"/pokedex"}>Pokedex</Link>
       </nav>
       <Routes>

@@ -67,17 +67,12 @@ const CreateOne = () => {
             <h2 >Add Pokemon</h2>
             <form onSubmit={submitHandler} >
 
-
-                {/* <img src={pokeList.image} alt="Pokemon" height="170" />
-
-                <button type="button" onClick={searchHandler}></button> */}
-
-<div>
-  <img src={pokeList.image} alt="Pokemon" height="170" />
-  <button type="button" onClick={searchHandler}>
-    Click Me
-  </button>
-</div>
+                <div>
+                <img src={pokeList.image} alt="Pokemon" height="170" />
+                <button type="button" onClick={searchHandler}>
+                    Click Me
+                </button>
+                </div>
 
                 <div>
                     <label htmlFor="">PokeSearch</label>

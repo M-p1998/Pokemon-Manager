@@ -5,3 +5,54 @@ h2{
     margin-top: 20px;
     color:wheat;
 }
+
+/* Your existing styles... */
+
+/* Styling for the form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #282c36;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the controller buttons */
+  button[type="button"],
+  input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #6e9bcc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the label */
+  label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  /* Styling for the text input fields */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Styling for error messages */
+  .errors {
+    color: #ff5f5f;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Your existing styles... */
+  

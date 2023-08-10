@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import PokeBall from "./img/pokeball.png";
+import CreateOne from './components/CreateOne';
+import DisplayAll from "./components/DisplayAll";
+import DisplayOne from "./components/DisplayOne";
+import EditOne from "./components/EditOne";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <Link to={"/"}> <img src={PokeBall} id="pokeball" alt="logo" /> </Link>
+        <h1>Welcome to the PokeCenter</h1>
+        <Link to={"/pokedex"}>Pokedex</Link>
+      </nav>
+      <Routes>
+
+        {/* <Route path='/pokedex' element={<CreateOne /> }/>
+        <Route path='/' element={<DisplayAll /> }/>
+        <Route path='/displayOne' element={<DisplayOne /> }/>
+        <Route path="/editOne" element={<EditOne /> }/> */}
+
+        <Route path="/pokedex" element={<CreateOne />} />
+        <Route path="/" element={<DisplayAll />} />
+        <Route path="/displayOne/:id" element={<DisplayOne />} />
+        <Route path="/editOne/:id" element={<EditOne />} />
+
+      </Routes>
+      
     </div>
+    </BrowserRouter>
   );
 }
 

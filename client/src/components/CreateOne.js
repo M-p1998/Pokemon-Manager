@@ -53,12 +53,13 @@ const CreateOne = () => {
             .post("http://localhost:8000/api/pokemon", pokeList)
             .then((res) => {
                 console.log("Success! You add a pokemon to your party", res.data)
-                setErrors({})
+                // setErrors({})
                 navigate("/")
             })
             .catch((err) => {
                 console.log("Something went wrong (CreateOne.js) ", err)
-                setErrors({ ...errors, postErrors: err.response.data.errors })
+                // setErrors({ ...errors, postErrors: err.response.data.errors })
+                setErrors(err.response.data.errors )
             })
     }
 
@@ -84,11 +85,17 @@ const CreateOne = () => {
                         <p>Type: {pokeList.type.charAt(0).toUpperCase() + pokeList.type.slice(1)}</p>
 
                         <div>
+                            {errors.nickname ? <p className='errors'> {errors.nickname.message}</p> : null}
+                           
 
                             <label htmlFor="nickname">Nickname: </label>
                             <input type="text" name="nickname" placeholder="Please nickname your pokemon" onChange={changeHandler} />
                             <input type="submit" value="Add to Party" />
                             {errors.postErrors ? <p className='errors'>{errors.postErrors}</p> : null}
+
+
+
+
                         </div>
                     </div>
                 ) : null

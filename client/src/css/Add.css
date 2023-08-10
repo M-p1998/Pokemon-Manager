@@ -6,9 +6,6 @@ h2{
     color:wheat;
 }
 
-
-
-/* Styling for the form */
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -58,5 +55,4 @@ form {
     color: rgb(120, 150, 201);
     margin: 10px;
   }
-  /* Your existing styles... */
-  
+

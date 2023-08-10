@@ -4,6 +4,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { useEffect, useState } from 'react';
+import styles from "../css/Add.css";
 
 
 const EditOne = () => {
@@ -11,6 +12,12 @@ const EditOne = () => {
     const [onePokemon, setOnePokemon] = useState({})
     const[newNickname, setNewNickname] = useState("")
     const navigate = useNavigate()
+
+
+    const [errors, setErrors] = useState({
+      searchErrors: "",
+      postErrors: ""
+  })
 
     useEffect(() =>{
         axios
@@ -37,6 +44,10 @@ const EditOne = () => {
               })
               .catch((err) =>{
                 console.log("Something went wrong: ", err)
+
+
+                setErrors(err.response.data.errors )
+
               })
     }
 
@@ -47,6 +58,9 @@ const EditOne = () => {
         <div >
             <h4>Name: {onePokemon.name} </h4>
             <label>Nickname </label>
+
+            {errors.nickname ? <p className='errors'> {errors.nickname.message}</p> : null}
+
             <input type="text" id="new-nickname" value={newNickname} onChange={(e) => setNewNickname(e.target.value) }/>
             <img src={onePokemon.image} alt="a pokemon"/>
             <p>Type: {onePokemon.type}</p>

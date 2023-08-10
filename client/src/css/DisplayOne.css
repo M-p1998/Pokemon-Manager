@@ -1,0 +1,20 @@
+
+
+
+ .one {
+    background-color:  rgb(158, 144, 20);
+    border: 1px solid rgb(10, 71, 24);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.one img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto; 
+} 

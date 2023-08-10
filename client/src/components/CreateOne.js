@@ -68,7 +68,7 @@ const CreateOne = () => {
             <form onSubmit={submitHandler} >
 
                 <div>
-                <img src={pokeList.image} alt="Pokemon" height="170" />
+                <img src={pokeList.image} alt="Pokemon" height="200" />
                 <button type="button" onClick={searchHandler}>
                     Click Me
                 </button>
@@ -79,7 +79,7 @@ const CreateOne = () => {
                     {errors.searchErrors ? <p className='errors'>{errors.searchErrors}</p> : null}
                     <input type="text" placeholder="Polemon Names" name="name" onChange={changeHandler} />
                 </div>
-                {pokeList.name !== "" && pokeList.type !== "" ?
+                {pokeList.name !== "" && pokeList.type !== "" ? (
                     <ul>
 
                         <li>Name: {pokeList.name.charAt(0).toUpperCase() + pokeList.name.slice(1)}  |</li>
@@ -93,13 +93,18 @@ const CreateOne = () => {
                             {errors.postErrors ? <p className='errors'>{errors.postErrors}</p> : null}
                         </div>
                     </ul>
-                    : null
+     ) : null
                 }
 
 
 
 
             </form>
+
+            
+
+
+
         </>
     )
 }

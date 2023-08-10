@@ -44,7 +44,7 @@ const EditOne = () => {
     <>
     <h2>Edit Pokemon</h2>
     <form onSubmit={submitHandler}>
-        <div className="pokemon-card">
+        <div >
             <h4>Name: {onePokemon.name} </h4>
             <label>Nickname </label>
             <input type="text" id="new-nickname" value={newNickname} onChange={(e) => setNewNickname(e.target.value) }/>

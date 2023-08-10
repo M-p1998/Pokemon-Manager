@@ -38,15 +38,19 @@ const DisplayAll = () => {
 
   return (
     <div>
+
+
         <h2 className="space">Pokemon Party</h2>
         <div className="poke-party">
             {
                 pokemonParty.map((onePokemon) => (
                     <div className="pokemon-card" key={onePokemon._id}>
                         <h3>{onePokemon.name.charAt(0).toUpperCase() + onePokemon.name.slice(1)}</h3>
-                        <p>Nickname: {onePokemon.nickname.charAt(0).toUpperCase() + onePokemon.nickname.slice(1)}</p>
+                        <h6>Nickname: {onePokemon.nickname.charAt(0).toUpperCase() + onePokemon.nickname.slice(1)}</h6>
+                        <div className="card-image">
                         <Link to={`/displayOne/${onePokemon._id}`}><img src={onePokemon.image} alt={onePokemon.name} /></Link>
-                        <p>Type: {onePokemon.type}</p>
+                        </div>
+                        <h6>Type: {onePokemon.type}</h6>
                         <div className="card-buttons">
                             <button className="green-btn" onClick={() => navigate(`/editOne/${onePokemon._id}`)}>Edit</button>
                             <button className="red-btn" onClick={() => deleteHandler(onePokemon._id)}>Delete</button>

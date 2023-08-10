@@ -18,8 +18,7 @@ nav {
     height: 70px;
     margin-left: 80px;
   }
-  
-  
+
  
   
   /* Style for the h1 element */
@@ -46,4 +45,27 @@ nav {
     color: #ff0000; /* Change the color on hover */
     
   }
+
+
+/* Custom CSS for styling the navigation */
+.nav-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-container img {
+  margin-right: 5px; /* Add a small spacing between logo and link */
+}
+
+.nav-container a {
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Adjust link color */
+  margin: 0; /* Reset margin */
+}
+
+
+
+
+ 
+  
   

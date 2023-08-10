@@ -53,6 +53,10 @@ form {
     font-size: 14px;
     margin-top: 5px;
   }
-  
+
+  p{
+    color: rgb(120, 150, 201);
+    margin: 10px;
+  }
   /* Your existing styles... */
   

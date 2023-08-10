@@ -67,23 +67,21 @@ const CreateOne = () => {
             <h2 >Add Pokemon</h2>
             <form onSubmit={submitHandler} >
 
-                <div>
-                <img src={pokeList.image} alt="Pokemon" height="200" />
-                <button type="button" onClick={searchHandler}>
-                    Click Me
-                </button>
+                <div className="{styles.image}">
+                    <img src={pokeList.image} alt="Pokemon" className={styles.image} />
+                    <button type="button" onClick={searchHandler}> Click Me </button>
                 </div>
 
                 <div>
                     <label htmlFor="">PokeSearch</label>
                     {errors.searchErrors ? <p className='errors'>{errors.searchErrors}</p> : null}
-                    <input type="text" placeholder="Polemon Names" name="name" onChange={changeHandler} />
+                    <input type="text" placeholder="Pokemon Names" name="name" onChange={changeHandler} />
                 </div>
                 {pokeList.name !== "" && pokeList.type !== "" ? (
-                    <ul>
+                    <div>
 
-                        <li>Name: {pokeList.name.charAt(0).toUpperCase() + pokeList.name.slice(1)}  |</li>
-                        <li>Type: {pokeList.type.charAt(0).toUpperCase() + pokeList.type.slice(1)}</li>
+                        <p>Name: {pokeList.name.charAt(0).toUpperCase() + pokeList.name.slice(1)}</p>
+                        <p>Type: {pokeList.type.charAt(0).toUpperCase() + pokeList.type.slice(1)}</p>
 
                         <div>
 
@@ -92,8 +90,8 @@ const CreateOne = () => {
                             <input type="submit" value="Add to Party" />
                             {errors.postErrors ? <p className='errors'>{errors.postErrors}</p> : null}
                         </div>
-                    </ul>
-     ) : null
+                    </div>
+                ) : null
                 }
 
 
@@ -101,7 +99,7 @@ const CreateOne = () => {
 
             </form>
 
-            
+
 
 
 

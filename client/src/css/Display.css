@@ -79,9 +79,21 @@
     margin: 0;
     padding: 0;
   }
+
+  .card-image{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .card-image img{
+    width: 60%;
+    max-height: 200px;
+  }
   
   .card-buttons button {
     margin-top: 10px;
+    max-height: 200px;
   }
   
   .green-btn,
